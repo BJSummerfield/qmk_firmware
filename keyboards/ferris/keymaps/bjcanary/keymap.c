@@ -39,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_W,    KC_L,    KC_Y,    KC_P,    KC_B,            KC_Z,    KC_F,   KC_O,     KC_U,    KC_QUOT,
     HOME_C,  HOME_R,  HOME_S,  HOME_T,  KC_G,            KC_M,    HOME_N, HOME_E,   HOME_I,  HOME_A,
     KC_Q,    KC_J,    KC_V,    KC_D,    KC_K,            KC_X,    KC_H,   KC_SLASH, KC_COMM, KC_DOT,
-                                    SYMBOL, KC_SPC, KC_BSPC, NAV
+                                    SYMBOL, KC_BSPC, KC_SPC, NAV
   ),
   [_GAME] = LAYOUT(
     KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,            KC_TRNS,    KC_TRNS,   KC_TRNS,    KC_TRNS,   KC_TRNS,
@@ -69,11 +69,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 //COMBO's
 const uint16_t PROGMEM function_layer[] = {SYMBOL, NAV, COMBO_END};
-const uint16_t PROGMEM c_escape[] = {KC_SPC, HOME_C, COMBO_END};
-const uint16_t PROGMEM q_delete[] = {KC_SPC, KC_Q, COMBO_END};
-const uint16_t PROGMEM w_btick[] = {KC_SPC, KC_W, COMBO_END};
-const uint16_t PROGMEM a_scln[] = {KC_BSPC, HOME_A, COMBO_END};
-const uint16_t PROGMEM quot_bsl[] = {KC_BSPC, KC_QUOT, COMBO_END};
+const uint16_t PROGMEM c_escape[] = {KC_BSPC, HOME_C, COMBO_END};
+const uint16_t PROGMEM q_delete[] = {KC_BSPC, KC_Q, COMBO_END};
+const uint16_t PROGMEM w_btick[] = {KC_BSPC, KC_W, COMBO_END};
+const uint16_t PROGMEM a_scln[] = {KC_SPC, HOME_A, COMBO_END};
+const uint16_t PROGMEM quot_bsl[] = {KC_SPC, KC_QUOT, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(function_layer, MO(_FUNCTION)),
