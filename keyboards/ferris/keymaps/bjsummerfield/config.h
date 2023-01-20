@@ -31,12 +31,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_INTERVAL 50
 // The default is 40
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 100
+// default is 8
+#define MOUSEKEY_MOVE_DELTA 5
 
 // Pick good defaults for enabling homerow modifiers
 #define TAPPING_TERM 200
 #define PERMISSIVE_HOLD
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
+
 
 // Combo
 #define COMBO_COUNT 6
