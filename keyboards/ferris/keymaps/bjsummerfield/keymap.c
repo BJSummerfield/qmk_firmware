@@ -11,8 +11,10 @@
 enum ferris_layers {
   _QWERTY = 0,
   _GAME,
+  _DOTA,
   _MOUSE,
   _SYMBOL,
+  _DOTANAV,
   _NAV,
   _FUNCTION
 };
@@ -88,7 +90,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 //COMBO's
-const uint16_t PROGMEM function_layer[] = {SYMBOL, NAV, COMBO_END};
+const uint16_t PROGMEM function_layer1[] = {DOTANAV, NAV, COMBO_END};
+const uint16_t PROGMEM function_layer2[] = {SYMBOL, NAV, COMBO_END};
 const uint16_t PROGMEM a_escape[] = {KC_BSPC, HOME_A, COMBO_END};
 const uint16_t PROGMEM z_delete[] = {KC_BSPC, KC_Z, COMBO_END};
 const uint16_t PROGMEM q_btick[] = {KC_BSPC, KC_Q, COMBO_END};
@@ -96,7 +99,8 @@ const uint16_t PROGMEM scln_qt[] = {KC_SPC, HOME_SCLN, COMBO_END};
 const uint16_t PROGMEM p_bsl[] = {KC_SPC, KC_P, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(function_layer, MO(_FUNCTION)),
+    COMBO(function_layer1, MO(_FUNCTION)),
+    COMBO(function_layer2, MO(_FUNCTION)),
     COMBO(a_escape, KC_ESC),
     COMBO(z_delete, KC_DEL),
     COMBO(q_btick, KC_GRV),
